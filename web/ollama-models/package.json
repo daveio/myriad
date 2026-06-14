@@ -1,0 +1,31 @@
+{
+  "name": "ollama-models",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "nuxt dev",
+    "lint": "eslint .",
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt preview",
+    "test": "vitest run",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "lucide-vue-next": "^1.0.0",
+    "nuxt": "^4.4.8",
+    "vue": "^3.5.38"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.5.0",
+    "eslint-plugin-vue": "^10.9.2",
+    "globals": "^17.6.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.0",
+    "vitest": "^4.1.8",
+    "vue-eslint-parser": "^10.4.1",
+    "vue-tsc": "^3.3.5"
+  }
+}
