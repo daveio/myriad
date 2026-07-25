@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cv version="1.0.0" language="en-GB" generated="2026-07-24">
+  <meta>
+    <title>CV — Dave Williams</title>
+    <purpose>Canonical, machine-readable CV data. Used to generate downstream artefacts: a print/application PDF and a web page on syn.horse (Nuxt 4). Not intended for direct presentation as a CV itself.</purpose>
+    <companionFiles>
+      <file>CV.md — same content as canonical narrative Markdown</file>
+      <file>CV.yaml — same content as structured YAML data</file>
+    </companionFiles>
+    <sources>
+      <source>cv.dave-williams.pdf (Enhancv export, last updated July 2026)</source>
+      <source>Notion CV export (earlier iteration)</source>
+      <source>syn.horse (/cv, /projects, /now) and github.com/synmux, as of July 2026</source>
+    </sources>
+    <agentNotes>
+      <note>Spelling is UK English (en-GB); keep it that way in generated artefacts.</note>
+      <note>The 2023–present period is deliberate independent work. When rendering a chronology, include the 'Independent Engineering Projects' entry and/or the Projects section so no unexplained gap appears.</note>
+      <note>Earlier timeline gaps (2014–2016, 2017–2019) are historical; do not invent filler for them.</note>
+      <note>Retired identity — do NOT use: dave@dave.io, github.com/daveio, dave.io. Current identity: syn@syn.as, github.com/synmux, syn.horse.</note>
+      <note>Project taglines in the 'tagline' field are 'site voice': intentionally lowercase and informal. Use them for the web page; prefer the formal 'summary' fields for the PDF.</note>
+      <note>Pronouns are provided as a data field; each downstream generator decides whether to render them.</note>
+    </agentNotes>
+  </meta>
+  <basics>
+    <name>Dave Williams</name>
+    <aka>syn</aka>
+    <pronouns>they/them</pronouns>
+    <headline>DevOps, SRE &amp; Infrastructure Engineer</headline>
+    <targetRoles>Senior DevOps / Infrastructure / SRE engineering roles</targetRoles>
+    <location city="London" country="United Kingdom" />
+    <email>syn@syn.as</email>
+    <phone e164="+447432104037">+44 7432 104037</phone>
+    <profiles>
+      <profile type="website" url="https://syn.horse" />
+      <profile type="github" url="https://github.com/synmux" />
+      <profile type="linkedin" url="https://linkedin.com/in/dcwilliams" />
+    </profiles>
+  </basics>
+  <summary>
+    <paragraph>Multiplatform infrastructure engineer with more than twenty years across DevOps, SRE, and systems administration, specialising in Kubernetes and Linux/*BSD environments and equally comfortable in Windows. Extensive production experience with Google Cloud Platform and Amazon Web Services, more recently joined by the Cloudflare developer platform (Workers, D1). Strong Kubernetes administration and troubleshooting background, including initial buildouts and value-adds such as the Linkerd service mesh and Prometheus monitoring.</paragraph>
+    <paragraph>A great believer in automation over repetitive busywork — freeing engineering time for harder problems and minimising the scope for human error — with current tooling centred on infrastructure-as-code (Terraform, Pulumi), GitOps, and OpenTelemetry-based observability.</paragraph>
+    <paragraph>Experienced in running and managing a team: evaluating, hiring, and upskilling engineers; sprint-based task prioritisation; and balancing business-as-usual break/fix work against larger-scope project work. Most recently led infrastructure at Feeld for four years as Head of Infrastructure.</paragraph>
+    <paragraph>Programs in Go, Python, Ruby, JavaScript/TypeScript, and shell (a Fish enthusiast); intermediate Java; writes Rust for current CLI tooling. Lifelong special interest in information security — penetration testing, platform hardening, DFIR, and IoT security — alongside non-professional electronic engineering and making. A lateral and quick thinker when things inevitably go sideways.</paragraph>
+  </summary>
+  <keyAchievements>
+    <achievement id="cost-reduction">
+      <title>Cost reduction at scale</title>
+      <metric>&gt;75% reduction in monthly infrastructure spend (Feeld)</metric>
+      <description>Cut Feeld's monthly infrastructure spend by more than 75% through optimisation initiatives: standardising logging and OpenTelemetry instrumentation with the development team (roughly halving cloud spend), bringing Redis and PostgreSQL in-house, and applying serverless technologies.</description>
+    </achievement>
+    <achievement id="incident-automation">
+      <title>Incident automation</title>
+      <metric>&gt;40% reduction in downtime</metric>
+      <description>Built automated remediation for common incidents, decreasing downtime by more than 40%.</description>
+    </achievement>
+    <achievement id="project-leadership">
+      <title>Project leadership</title>
+      <metric>3 major infrastructure projects on time and under budget</metric>
+      <description>Led the team to complete three major infrastructure projects on time and under budget.</description>
+    </achievement>
+    <achievement id="sd-wan">
+      <title>SD-WAN implementation</title>
+      <metric>&gt;90% reduction in access-related developer tickets</metric>
+      <description>Designed and rolled out an SD-WAN, reducing access-related developer tickets by more than 90% while improving security posture.</description>
+    </achievement>
+  </keyAchievements>
+  <skills>
+    <skillGroup name="Cloud platforms">
+      <skill>Google Cloud Platform</skill>
+      <skill>Amazon Web Services</skill>
+      <skill>Azure</skill>
+      <skill>Cloudflare (Workers, D1)</skill>
+    </skillGroup>
+    <skillGroup name="Containers &amp; orchestration">
+      <skill>Kubernetes</skill>
+      <skill>Docker</skill>
+      <skill>containers</skill>
+      <skill>Linkerd service mesh</skill>
+    </skillGroup>
+    <skillGroup name="Automation &amp; IaC">
+      <skill>Terraform</skill>
+      <skill>Pulumi</skill>
+      <skill>GitOps</skill>
+      <skill>infrastructure-as-code</skill>
+      <skill>CI/CD</skill>
+      <skill>serverless</skill>
+    </skillGroup>
+    <skillGroup name="Observability">
+      <skill>Prometheus</skill>
+      <skill>OpenTelemetry</skill>
+      <skill>monitoring</skill>
+      <skill>logging standardisation</skill>
+      <skill>incident management</skill>
+    </skillGroup>
+    <skillGroup name="Operating systems">
+      <skill>Linux (Red Hat/CentOS, Ubuntu)</skill>
+      <skill>FreeBSD/*BSD</skill>
+      <skill>Windows/Windows Server</skill>
+      <skill>macOS</skill>
+      <skill>AIX (historical)</skill>
+    </skillGroup>
+    <skillGroup name="Languages">
+      <skill>Go</skill>
+      <skill>Python</skill>
+      <skill>Ruby</skill>
+      <skill>JavaScript</skill>
+      <skill>TypeScript</skill>
+      <skill>shell (bash, fish)</skill>
+      <skill>Rust</skill>
+      <skill>Java (intermediate)</skill>
+    </skillGroup>
+    <skillGroup name="Networking">
+      <skill>Cisco IOS</skill>
+      <skill>Vyatta</skill>
+      <skill>MikroTik</skill>
+      <skill>Ubiquiti</skill>
+      <skill>Juniper</skill>
+      <skill>SD-WAN</skill>
+      <skill>VoIP</skill>
+      <skill>load balancing (HAProxy, Nginx, Apache)</skill>
+    </skillGroup>
+    <skillGroup name="Data &amp; storage">
+      <skill>PostgreSQL</skill>
+      <skill>MySQL</skill>
+      <skill>Redis</skill>
+      <skill>database administration</skill>
+      <skill>SAN/NAS (3PAR, EMC)</skill>
+    </skillGroup>
+    <skillGroup name="Virtualisation">
+      <skill>VMware</skill>
+    </skillGroup>
+    <skillGroup name="Security">
+      <skill>platform hardening</skill>
+      <skill>penetration testing</skill>
+      <skill>DFIR</skill>
+      <skill>IoT security</skill>
+      <skill>threat management</skill>
+      <skill>attack-surface reduction</skill>
+    </skillGroup>
+    <skillGroup name="Web frameworks (project work)">
+      <skill>Nuxt</skill>
+      <skill>Vue</skill>
+      <skill>Tailwind CSS</skill>
+      <skill>Ruby on Rails (historical)</skill>
+    </skillGroup>
+    <skillGroup name="Leadership &amp; practice">
+      <skill>team building and management</skill>
+      <skill>upskilling</skill>
+      <skill>sprint-based prioritisation</skill>
+      <skill>project and budget management</skill>
+      <skill>on-call rota design</skill>
+      <skill>runbooks</skill>
+    </skillGroup>
+  </skills>
+  <experience>
+    <role id="independent" start="2023" end="present" duration="~3 years">
+      <title>Independent Engineering Projects</title>
+      <organisation>Self-directed</organisation>
+      <location>London, United Kingdom</location>
+      <highlights>
+        <highlight>Deliberate period of self-directed engineering following Feeld — see the projects section for full detail.</highlight>
+        <highlight>Designed, built, and operate a personal platform on modern serverless infrastructure: Nuxt 4 on Cloudflare Workers, deployed with Wrangler (syn.horse).</highlight>
+        <highlight>Built and maintain genderbase.com, a structured directory of gender-affirming resources, on a quarterly content-review cycle.</highlight>
+        <highlight>Shipped recon, an iOS image resize/conversion utility, through to App Store release.</highlight>
+        <highlight>Wrote and maintain open-source CLI tooling in Rust, TypeScript, and Go (bunnypmsl, lics, rhymepass, noti, tabby).</highlight>
+        <highlight>Developing Project Ambio: C++ firmware with a public Nuxt 4 companion platform (Three.js, Cloudflare D1, Drizzle ORM).</highlight>
+        <highlight>Operate a Meshtastic LoRa mesh node, including siting/antenna optimisation that extended usable range from 8 km to roughly 12 km.</highlight>
+      </highlights>
+    </role>
+    <role id="feeld" start="2019" end="2023" duration="4 years">
+      <title>Head of Infrastructure</title>
+      <organisation>Feeld</organisation>
+      <location>Remote</location>
+      <highlights>
+        <highlight>Built and led a dedicated infrastructure team: evaluated, hired, managed, and upskilled engineers across multiple time zones, with full responsibility for infrastructure operations, planning, and reporting, plus project and budget management.</highlight>
+        <highlight>Modernised the entire platform, implementing infrastructure-as-code, GitOps, and the Linkerd service mesh.</highlight>
+        <highlight>Worked with the development team to instrument the codebase with OpenTelemetry and standardise logging, roughly halving cloud spend.</highlight>
+        <highlight>Reduced overall monthly spend by more than 75% through further optimisation: bringing Redis and PostgreSQL in-house and applying serverless technologies to lower complexity and cost.</highlight>
+        <highlight>Built a bespoke incident management platform, automated remediation for common issues unresolved by the development team, and runbooks for all services in coordination with developers — decreasing downtime by more than 40%.</highlight>
+        <highlight>Built a single pane of glass for metrics and platform activity, plus tooling to support developers using OpenTelemetry and service-mesh instrumentation.</highlight>
+        <highlight>Implemented SD-WAN to secure access and reduce developer friction, cutting access-related tickets by more than 90%.</highlight>
+        <highlight>Shared and delegated on-call responsibilities across the team.</highlight>
+      </highlights>
+    </role>
+    <role id="mozilla" start="2016" end="2017" duration="1 year">
+      <title>MOC Engineer</title>
+      <organisation>Mozilla</organisation>
+      <location>Remote</location>
+      <highlights>
+        <highlight>Extremely wide-ranging remote role managing the full Mozilla infrastructure, with on-call responsibilities.</highlight>
+        <highlight>Demanded a broad skillset and the ability to learn new skills quickly.</highlight>
+        <highlight>Communication and collaboration with diverse teams of varying focus and technical depth; point of contact for "I don't know who I should talk to about this, but…" queries.</highlight>
+        <highlight>Began development of Panopticon, an in-house operations intelligence platform.</highlight>
+      </highlights>
+    </role>
+    <role id="facebook" start="2013" end="2014" duration="1 year">
+      <title>Production Engineer</title>
+      <organisation>Facebook</organisation>
+      <location>San Francisco, United States</location>
+      <highlights>
+        <highlight>Production engineering for Facebook's storage infrastructure: planning, deployment, and management of storage systems at massive scale.</highlight>
+        <highlight>Massive-scale Linux administration and toolset development, with on-call responsibilities.</highlight>
+        <highlight>Commissioned the new Malmö datacentre location: initial data seeding, ongoing replication, and integration into the global multi-tier storage infrastructure.</highlight>
+      </highlights>
+    </role>
+    <role id="six-degrees" start="2009" end="2013" duration="4 years">
+      <title>Systems Administrator</title>
+      <organisation>Six Degrees Group (formerly Ultraspeed)</organisation>
+      <location>London, United Kingdom</location>
+      <highlights>
+        <highlight>Part of a small team running a large managed hosting estate: Linux and Windows instances on VMware virtualisation.</highlight>
+        <highlight>Datacentre work, on-call duties, and direct contact with customers.</highlight>
+        <highlight>3PAR SAN administration and Vyatta network administration.</highlight>
+        <highlight>Threat management and attack-surface reduction.</highlight>
+        <highlight>Design, implementation, and ongoing ownership of the managed backup platform (Asigra).</highlight>
+      </highlights>
+    </role>
+    <role id="ioko" start="2007" end="2009" duration="2 years">
+      <title>Systems Administrator</title>
+      <organisation>IOKO / KIT digital</organisation>
+      <location>London, United Kingdom</location>
+      <highlights>
+        <highlight>Linux-based deployment management and toolset development.</highlight>
+        <highlight>Systems support for large-scale IPTV clients, with on-call responsibilities.</highlight>
+      </highlights>
+    </role>
+    <role id="inspired-gaming" start="2006" end="2007" duration="1 year">
+      <title>Systems Administrator</title>
+      <organisation>Inspired Gaming Group</organisation>
+      <location>London, United Kingdom</location>
+      <highlights>
+        <highlight>Systems administration for a mid-scale estate across RHEL, Windows, and AIX platforms.</highlight>
+        <highlight>Managed the migration of the physical server estate to VMware virtualisation.</highlight>
+        <highlight>EMC SAN administration, with on-call responsibilities.</highlight>
+      </highlights>
+    </role>
+    <role id="dxi" start="2005" end="2006" duration="1 year">
+      <title>VoIP Engineer</title>
+      <organisation>DXI Networks</organisation>
+      <location>London, United Kingdom</location>
+      <highlights>
+        <highlight>Design, implementation, and support of a country-wide VoIP network on a managed Cisco backend.</highlight>
+        <highlight>Deployed Cisco user devices on-site, with on-call responsibilities.</highlight>
+      </highlights>
+    </role>
+  </experience>
+  <education>
+    <qualification start="2003" end="2007">
+      <institution>University of Kent</institution>
+      <location>Canterbury, United Kingdom</location>
+      <name>Computer Science, BSc (Hons)</name>
+    </qualification>
+  </education>
+  <certifications>
+    <certification year="2009">ITIL Certification</certification>
+    <certification year="2007">Red Hat Certified Engineer</certification>
+  </certifications>
+  <communityInterests>
+    <interest>Member of the London Hackspace since its inception.</interest>
+    <interest>Electronic engineering and making (non-professional).</interest>
+    <interest>Mesh and community networking (Meshtastic, LoRa).</interest>
+    <interest>Lifelong special interest in information security.</interest>
+  </communityInterests>
+  <keywords>
+    <keyword>3PAR</keyword>
+    <keyword>AIX</keyword>
+    <keyword>Amazon Web Services</keyword>
+    <keyword>Apache</keyword>
+    <keyword>Asigra</keyword>
+    <keyword>Automation</keyword>
+    <keyword>AWS</keyword>
+    <keyword>Azure</keyword>
+    <keyword>Bun</keyword>
+    <keyword>CentOS</keyword>
+    <keyword>CI/CD</keyword>
+    <keyword>Cisco IOS</keyword>
+    <keyword>Cloud Computing</keyword>
+    <keyword>Cloudflare D1</keyword>
+    <keyword>Cloudflare Workers</keyword>
+    <keyword>Containers</keyword>
+    <keyword>cPanel</keyword>
+    <keyword>Database Administration</keyword>
+    <keyword>DFIR</keyword>
+    <keyword>Docker</keyword>
+    <keyword>Drizzle ORM</keyword>
+    <keyword>EMC</keyword>
+    <keyword>Fish shell</keyword>
+    <keyword>FreeBSD</keyword>
+    <keyword>GCP</keyword>
+    <keyword>GitOps</keyword>
+    <keyword>Go</keyword>
+    <keyword>Google Cloud Platform</keyword>
+    <keyword>HAProxy</keyword>
+    <keyword>High Availability</keyword>
+    <keyword>Incident Management</keyword>
+    <keyword>Infrastructure as Code</keyword>
+    <keyword>IoT Security</keyword>
+    <keyword>IT Security</keyword>
+    <keyword>ITIL</keyword>
+    <keyword>Java</keyword>
+    <keyword>JavaScript</keyword>
+    <keyword>Juniper</keyword>
+    <keyword>Kubernetes</keyword>
+    <keyword>Linkerd</keyword>
+    <keyword>Linux</keyword>
+    <keyword>Load Balancing</keyword>
+    <keyword>LoRa</keyword>
+    <keyword>macOS</keyword>
+    <keyword>Meshtastic</keyword>
+    <keyword>MikroTik</keyword>
+    <keyword>MySQL</keyword>
+    <keyword>NAS</keyword>
+    <keyword>Network Administration</keyword>
+    <keyword>Network Security</keyword>
+    <keyword>Nginx</keyword>
+    <keyword>Nuxt</keyword>
+    <keyword>Observability</keyword>
+    <keyword>On-call</keyword>
+    <keyword>OpenTelemetry</keyword>
+    <keyword>Passenger</keyword>
+    <keyword>Penetration Testing</keyword>
+    <keyword>Platform Hardening</keyword>
+    <keyword>PostgreSQL</keyword>
+    <keyword>Prometheus</keyword>
+    <keyword>Pulumi</keyword>
+    <keyword>Python</keyword>
+    <keyword>Red Hat Linux</keyword>
+    <keyword>Redis</keyword>
+    <keyword>Ruby</keyword>
+    <keyword>Ruby on Rails</keyword>
+    <keyword>Rust</keyword>
+    <keyword>SAN</keyword>
+    <keyword>SD-WAN</keyword>
+    <keyword>Serverless</keyword>
+    <keyword>Service Mesh</keyword>
+    <keyword>Shell Scripting</keyword>
+    <keyword>Systems Administration</keyword>
+    <keyword>Tailwind CSS</keyword>
+    <keyword>Terraform</keyword>
+    <keyword>TypeScript</keyword>
+    <keyword>Ubiquiti</keyword>
+    <keyword>Ubuntu</keyword>
+    <keyword>Vignette</keyword>
+    <keyword>Virtualisation</keyword>
+    <keyword>VMware</keyword>
+    <keyword>VoIP</keyword>
+    <keyword>Vue</keyword>
+    <keyword>Vyatta</keyword>
+    <keyword>Windows</keyword>
+    <keyword>Windows Server</keyword>
+    <keyword>Wrangler</keyword>
+  </keywords>
+  <projects>
+    <note>Independent work from 2023 onwards, included as primary evidence of current, hands-on engineering across the employment gap. Sourced from syn.horse/projects and github.com/synmux; 'tagline' fields are quoted verbatim from syn.horse (site voice).</note>
+    <project id="syn-horse" status="active" openSource="true" start="2026" end="present">
+      <name>syn.horse</name>
+      <summary>Personal site and platform, run as a production service: Nuxt 4 on Cloudflare Workers with markdown-based content and Wrangler deployments. Third full rewrite of the site.</summary>
+      <tagline voice="site">this site. nuxt 4 on cloudflare workers. the third rewrite. the last one. probably.</tagline>
+      <stack>
+        <tech>Nuxt 4</tech>
+        <tech>Cloudflare Workers</tech>
+        <tech>Wrangler</tech>
+        <tech>Markdown content</tech>
+      </stack>
+      <links>
+        <link>https://syn.horse</link>
+      </links>
+    </project>
+    <project id="genderbase" status="active" openSource="false" start="2025" end="present">
+      <name>genderbase</name>
+      <summary>A structured directory of gender-affirming resources, maintained on a quarterly review cycle to prune dead links and add new material.</summary>
+      <tagline voice="site">a directory of gender-affirming resources. low ui, high index.</tagline>
+      <stack>
+        <tech>Nuxt</tech>
+        <tech>wiki-style content</tech>
+      </stack>
+      <links>
+        <link>https://genderbase.com</link>
+      </links>
+    </project>
+    <project id="ambio" status="in development" openSource="false" start="2025" end="present">
+      <name>Project Ambio</name>
+      <summary>Hardware/IoT project in development: C++ firmware (currently private) with a public companion site featuring a WebGL particle background, theme support, and D1-backed email subscription. Tagline: "Something is listening."</summary>
+      <stack>
+        <tech>C++ (firmware)</tech>
+        <tech>Nuxt 4</tech>
+        <tech>Vue 3</tech>
+        <tech>Three.js</tech>
+        <tech>Tailwind CSS</tech>
+        <tech>DaisyUI</tech>
+        <tech>Cloudflare D1</tech>
+        <tech>Drizzle ORM</tech>
+        <tech>Bun</tech>
+      </stack>
+      <links>
+        <link>https://github.com/synmux/ambio-systems</link>
+      </links>
+    </project>
+    <project id="bunnypmsl" status="active" openSource="true" end="present" licence="MIT">
+      <name>bunnypmsl</name>
+      <summary>Smart bookmark / command router — a UK-centric fork of Facebook's bunnylol.rs with opinionated additions: CLI and web-server modes, 50+ built-in commands, custom aliases, Docker deployment. 180+ commits.</summary>
+      <stack>
+        <tech>Rust</tech>
+        <tech>Rocket</tech>
+        <tech>Askama</tech>
+        <tech>clap</tech>
+      </stack>
+      <links>
+        <link>https://github.com/synmux/bunnypmsl</link>
+      </links>
+    </project>
+    <project id="rhymepass" status="active" openSource="true" start="2024" end="present">
+      <name>rhymepass</name>
+      <summary>Command-line generator for rhyming — yet still secure — passwords.</summary>
+      <tagline voice="site">generates rhyming passwords. yes, really. yes, secure.</tagline>
+      <stack>
+        <tech>CLI</tech>
+      </stack>
+      <links>
+        <link>https://github.com/synmux/rhymepass</link>
+      </links>
+    </project>
+    <project id="recon" status="active" openSource="false" start="2024" end="present">
+      <name>recon</name>
+      <summary>iOS utility to resize and convert images, shipped end-to-end as an independent App Store release. App Store listing linked from syn.horse/projects.</summary>
+      <tagline voice="site">resize and convert images on iOS. a small, opinionated, genuinely fast tool.</tagline>
+      <stack>
+        <tech>iOS</tech>
+      </stack>
+      <links>
+        <link>https://syn.horse/projects</link>
+      </links>
+    </project>
+    <project id="lics" status="active" openSource="true" start="2024" end="present">
+      <name>lics</name>
+      <summary>CLI for managing software licence keys, using Notion as the backing database.</summary>
+      <stack>
+        <tech>TypeScript</tech>
+        <tech>Notion API</tech>
+      </stack>
+      <links>
+        <link>https://github.com/synmux/lics</link>
+      </links>
+    </project>
+    <project id="dcw-soy" status="active" openSource="false" start="2024" end="present">
+      <name>dcw.soy</name>
+      <summary>Single-purpose static site; a joke shipped properly, with TLS.</summary>
+      <tagline voice="site">a duck or a soy? a static site that asks the only question that matters.</tagline>
+      <stack>
+        <tech>static site</tech>
+        <tech>Cloudflare</tech>
+      </stack>
+      <links>
+        <link>https://dcw.soy</link>
+      </links>
+    </project>
+    <project id="meshtastic-node" status="active" openSource="false" end="present">
+      <name>Meshtastic node</name>
+      <summary>Operates a node on a community LoRa mesh network; recent re-siting and antenna work extended usable range from 8 km to roughly 12 km.</summary>
+      <stack>
+        <tech>Meshtastic</tech>
+        <tech>LoRa radio hardware</tech>
+      </stack>
+      <links>
+        <link>https://syn.horse/now</link>
+      </links>
+    </project>
+    <project id="noti" status="retired" openSource="true" start="2023" end="2023">
+      <name>noti</name>
+      <summary>CLI tool to monitor a process and trigger a notification on completion.</summary>
+      <tagline voice="site">monitor a process and trigger a notification.</tagline>
+      <stack>
+        <tech>CLI</tech>
+      </stack>
+      <links>
+        <link>https://github.com/synmux/noti</link>
+      </links>
+    </project>
+    <project id="tabby" status="retired" openSource="true" start="2023" end="2023">
+      <name>tabby</name>
+      <summary>Personal new-tab dashboard: todos, weather, RSS feeds, and more in one page.</summary>
+      <tagline voice="site">a personal new tab dashboard. todos, weather, RSS, the lot.</tagline>
+      <stack>
+        <tech>Go</tech>
+        <tech>web</tech>
+      </stack>
+      <links>
+        <link>https://github.com/synmux/tabby</link>
+      </links>
+    </project>
+  </projects>
+</cv>
