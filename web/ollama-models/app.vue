@@ -11,20 +11,20 @@ import {
   SlidersHorizontal,
   Tags,
   Timer,
-} from 'lucide-vue-next'
+} from "lucide-vue-next";
 
 import {
   formatBytes,
   formatContext,
   formatParameterBillions,
-} from '~/shared/modelMetrics'
+} from "~/shared/modelMetrics";
 import type {
   CatalogueFilters,
   CatalogueSort,
   CatalogueTagRow,
   OllamaCataloguePayload,
   OllamaModel,
-} from '~/types/ollama'
+} from "~/types/ollama";
 import {
   collectCapabilities,
   collectInputTypes,
@@ -32,31 +32,31 @@ import {
   flattenCatalogue,
   sortCatalogueRows,
   summariseRows,
-} from '~/utils/catalogueFilters'
+} from "~/utils/catalogueFilters";
 
 interface VisibleGroup {
-  model: OllamaModel
-  rows: CatalogueTagRow[]
+  model: OllamaModel;
+  rows: CatalogueTagRow[];
 }
 
-const externalBaseUrl = 'https://ollama.com'
-const visibleIncrement = 250
-const refreshCounter = ref(0)
-const visibleLimit = ref(visibleIncrement)
-const copiedCommand = ref<string | null>(null)
+const externalBaseUrl = "https://ollama.com";
+const visibleIncrement = 250;
+const refreshCounter = ref(0);
+const visibleLimit = ref(visibleIncrement);
+const copiedCommand = ref<string | null>(null);
 const sortState = reactive<CatalogueSort>({
-  direction: 'desc',
-  key: 'pulls',
-})
+  direction: "desc",
+  key: "pulls",
+});
 const filterInputs = reactive({
   capabilities: [] as string[],
   inputTypes: [] as string[],
-  maxParametersB: '',
-  maxSizeGb: '',
-  minContextK: '',
-  minParametersB: '',
-  query: '',
-})
+  maxParametersB: "",
+  maxSizeGb: "",
+  minContextK: "",
+  minParametersB: "",
+  query: "",
+});
 
 const {
   data: catalogue,
@@ -64,10 +64,10 @@ const {
   refresh,
   status,
 } = await useAsyncData<OllamaCataloguePayload>(
-  'ollama-catalogue',
+  "ollama-catalogue",
   () =>
-    $fetch('/api/models', {
-      query: refreshCounter.value > 0 ? { refresh: '1' } : undefined,
+    $fetch("/api/models", {
+      query: refreshCounter.value > 0 ? { refresh: "1" } : undefined,
     }),
   {
     default: () => ({
@@ -76,20 +76,20 @@ const {
         ttlSeconds: 0,
       },
       errors: [],
-      generatedAt: '',
+      generatedAt: "",
       models: [],
-      sourceUrl: '',
+      sourceUrl: "",
     }),
   },
-)
+);
 
-const isLoading = computed(() => status.value === 'pending')
-const models = computed(() => catalogue.value?.models ?? [])
-const allRows = computed(() => flattenCatalogue(models.value))
-const allCapabilities = computed(() => collectCapabilities(models.value))
-const allInputTypes = computed(() => collectInputTypes(allRows.value))
+const isLoading = computed(() => status.value === "pending");
+const models = computed(() => catalogue.value?.models ?? []);
+const allRows = computed(() => flattenCatalogue(models.value));
+const allCapabilities = computed(() => collectCapabilities(models.value));
+const allInputTypes = computed(() => collectInputTypes(allRows.value));
 const activeFilters = computed<CatalogueFilters>(() => {
-  const minContextK = parseOptionalNumber(filterInputs.minContextK)
+  const minContextK = parseOptionalNumber(filterInputs.minContextK);
 
   return {
     capabilities: filterInputs.capabilities,
@@ -99,66 +99,75 @@ const activeFilters = computed<CatalogueFilters>(() => {
     minContextTokens: minContextK === null ? null : minContextK * 1_000,
     minParametersB: parseOptionalNumber(filterInputs.minParametersB),
     query: filterInputs.query,
-  }
-})
+  };
+});
 const visibleRows = computed(() =>
-  sortCatalogueRows(filterCatalogueRows(allRows.value, activeFilters.value), sortState),
-)
-const displayedRows = computed(() => visibleRows.value.slice(0, visibleLimit.value))
-const visibleSummary = computed(() => summariseRows(visibleRows.value))
-const totalSummary = computed(() => summariseRows(allRows.value))
-const scrapeErrors = computed(() => catalogue.value?.errors ?? [])
-const hasMoreRows = computed(() => visibleRows.value.length > displayedRows.value.length)
+  sortCatalogueRows(
+    filterCatalogueRows(allRows.value, activeFilters.value),
+    sortState,
+  ),
+);
+const displayedRows = computed(() =>
+  visibleRows.value.slice(0, visibleLimit.value),
+);
+const visibleSummary = computed(() => summariseRows(visibleRows.value));
+const totalSummary = computed(() => summariseRows(allRows.value));
+const scrapeErrors = computed(() => catalogue.value?.errors ?? []);
+const hasMoreRows = computed(
+  () => visibleRows.value.length > displayedRows.value.length,
+);
 const activeFilterCount = computed(() => {
   const numericFilterCount = [
     filterInputs.maxParametersB,
     filterInputs.maxSizeGb,
     filterInputs.minContextK,
     filterInputs.minParametersB,
-  ].filter((value) => value.trim()).length
+  ].filter((value) => value.trim()).length;
 
   return (
     numericFilterCount +
     filterInputs.capabilities.length +
     filterInputs.inputTypes.length +
     (filterInputs.query.trim() ? 1 : 0)
-  )
-})
+  );
+});
 const visibleGroups = computed<VisibleGroup[]>(() => {
-  const modelsByName = new Map(models.value.map((model) => [model.name, model]))
-  const groupsByModel = new Map<string, VisibleGroup>()
+  const modelsByName = new Map(
+    models.value.map((model) => [model.name, model]),
+  );
+  const groupsByModel = new Map<string, VisibleGroup>();
 
   for (const row of displayedRows.value) {
-    const model = modelsByName.get(row.modelName)
+    const model = modelsByName.get(row.modelName);
 
     if (!model) {
-      continue
+      continue;
     }
 
-    const existingGroup = groupsByModel.get(row.modelName)
+    const existingGroup = groupsByModel.get(row.modelName);
 
     if (existingGroup) {
-      existingGroup.rows.push(row)
+      existingGroup.rows.push(row);
     } else {
       groupsByModel.set(row.modelName, {
         model,
         rows: [row],
-      })
+      });
     }
   }
 
-  return [...groupsByModel.values()]
-})
+  return [...groupsByModel.values()];
+});
 const generatedAtLabel = computed(() => {
   if (!catalogue.value?.generatedAt) {
-    return 'Not loaded'
+    return "Not loaded";
   }
 
-  return new Intl.DateTimeFormat('en-GB', {
-    dateStyle: 'medium',
-    timeStyle: 'short',
-  }).format(new Date(catalogue.value.generatedAt))
-})
+  return new Intl.DateTimeFormat("en-GB", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(new Date(catalogue.value.generatedAt));
+});
 
 watch(
   () => [
@@ -167,57 +176,57 @@ watch(
     filterInputs.minContextK,
     filterInputs.minParametersB,
     filterInputs.maxParametersB,
-    filterInputs.capabilities.join('|'),
-    filterInputs.inputTypes.join('|'),
+    filterInputs.capabilities.join("|"),
+    filterInputs.inputTypes.join("|"),
     sortState.key,
     sortState.direction,
   ],
   () => {
-    visibleLimit.value = visibleIncrement
+    visibleLimit.value = visibleIncrement;
   },
-)
+);
 
 async function refreshLiveData(): Promise<void> {
-  refreshCounter.value += 1
-  await refresh()
+  refreshCounter.value += 1;
+  await refresh();
 }
 
 function resetFilters(): void {
-  filterInputs.capabilities = []
-  filterInputs.inputTypes = []
-  filterInputs.maxParametersB = ''
-  filterInputs.maxSizeGb = ''
-  filterInputs.minContextK = ''
-  filterInputs.minParametersB = ''
-  filterInputs.query = ''
+  filterInputs.capabilities = [];
+  filterInputs.inputTypes = [];
+  filterInputs.maxParametersB = "";
+  filterInputs.maxSizeGb = "";
+  filterInputs.minContextK = "";
+  filterInputs.minParametersB = "";
+  filterInputs.query = "";
 }
 
 function toggleSelection(values: string[], value: string): void {
-  const existingIndex = values.indexOf(value)
+  const existingIndex = values.indexOf(value);
 
   if (existingIndex >= 0) {
-    values.splice(existingIndex, 1)
+    values.splice(existingIndex, 1);
   } else {
-    values.push(value)
+    values.push(value);
   }
 }
 
 async function copyPullCommand(tagName: string): Promise<void> {
-  const command = `ollama pull ${tagName}`
-  await navigator.clipboard.writeText(command)
-  copiedCommand.value = tagName
+  const command = `ollama pull ${tagName}`;
+  await navigator.clipboard.writeText(command);
+  copiedCommand.value = tagName;
 }
 
 function parseOptionalNumber(value: string): number | null {
-  const trimmedValue = value.trim()
+  const trimmedValue = value.trim();
 
   if (!trimmedValue) {
-    return null
+    return null;
   }
 
-  const parsedValue = Number(trimmedValue)
+  const parsedValue = Number(trimmedValue);
 
-  return Number.isFinite(parsedValue) ? parsedValue : null
+  return Number.isFinite(parsedValue) ? parsedValue : null;
 }
 </script>
 
@@ -236,10 +245,15 @@ function parseOptionalNumber(value: string): number | null {
 
       <div class="topbar-actions">
         <div class="source-chip">
-          <span>{{ catalogue?.cache.hit ? 'Cache' : 'Live' }}</span>
+          <span>{{ catalogue?.cache.hit ? "Cache" : "Live" }}</span>
           <strong>{{ generatedAtLabel }}</strong>
         </div>
-        <button class="icon-button wide" type="button" :disabled="isLoading" @click="refreshLiveData">
+        <button
+          class="icon-button wide"
+          type="button"
+          :disabled="isLoading"
+          @click="refreshLiveData"
+        >
           <RefreshCcw :size="16" :class="{ spinning: isLoading }" />
           <span>Refresh</span>
         </button>
@@ -288,25 +302,46 @@ function parseOptionalNumber(value: string): number | null {
 
         <label class="search-box">
           <Search :size="17" />
-          <input v-model="filterInputs.query" type="search" placeholder="qwen coder vision 128k" autocomplete="off">
+          <input
+            v-model="filterInputs.query"
+            type="search"
+            placeholder="qwen coder vision 128k"
+            autocomplete="off"
+          />
         </label>
 
         <div class="filter-grid">
           <label>
             <span>Max GB</span>
-            <input v-model="filterInputs.maxSizeGb" inputmode="decimal" type="text">
+            <input
+              v-model="filterInputs.maxSizeGb"
+              inputmode="decimal"
+              type="text"
+            />
           </label>
           <label>
             <span>Min ctx K</span>
-            <input v-model="filterInputs.minContextK" inputmode="numeric" type="text">
+            <input
+              v-model="filterInputs.minContextK"
+              inputmode="numeric"
+              type="text"
+            />
           </label>
           <label>
             <span>Min B</span>
-            <input v-model="filterInputs.minParametersB" inputmode="decimal" type="text">
+            <input
+              v-model="filterInputs.minParametersB"
+              inputmode="decimal"
+              type="text"
+            />
           </label>
           <label>
             <span>Max B</span>
-            <input v-model="filterInputs.maxParametersB" inputmode="decimal" type="text">
+            <input
+              v-model="filterInputs.maxParametersB"
+              inputmode="decimal"
+              type="text"
+            />
           </label>
         </div>
 
@@ -324,7 +359,14 @@ function parseOptionalNumber(value: string): number | null {
               <option value="updated">Updated</option>
               <option value="name">Name</option>
             </select>
-            <button class="segmented-button" type="button" @click="sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc'">
+            <button
+              class="segmented-button"
+              type="button"
+              @click="
+                sortState.direction =
+                  sortState.direction === 'asc' ? 'desc' : 'asc'
+              "
+            >
               {{ sortState.direction.toUpperCase() }}
             </button>
           </div>
@@ -340,7 +382,9 @@ function parseOptionalNumber(value: string): number | null {
               v-for="capability in allCapabilities"
               :key="capability"
               class="toggle-chip"
-              :class="{ active: filterInputs.capabilities.includes(capability) }"
+              :class="{
+                active: filterInputs.capabilities.includes(capability),
+              }"
               type="button"
               @click="toggleSelection(filterInputs.capabilities, capability)"
             >
@@ -383,14 +427,23 @@ function parseOptionalNumber(value: string): number | null {
         <div v-else-if="error" class="state-box error">
           <strong>Catalogue fetch failed</strong>
           <span>{{ error.message }}</span>
-          <button class="reset-button compact" type="button" @click="refreshLiveData">
+          <button
+            class="reset-button compact"
+            type="button"
+            @click="refreshLiveData"
+          >
             Retry
           </button>
         </div>
 
         <template v-else>
           <div v-if="scrapeErrors.length > 0" class="scrape-warning">
-            <strong>{{ scrapeErrors.length }} tag page{{ scrapeErrors.length === 1 ? '' : 's' }} failed</strong>
+            <strong
+              >{{ scrapeErrors.length }} tag page{{
+                scrapeErrors.length === 1 ? "" : "s"
+              }}
+              failed</strong
+            >
             <span>{{ scrapeErrors[0] }}</span>
           </div>
 
@@ -399,7 +452,10 @@ function parseOptionalNumber(value: string): number | null {
               <p class="eyebrow">Results</p>
               <h2>{{ visibleRows.length.toLocaleString() }} matching tags</h2>
             </div>
-            <span>{{ visibleGroups.length.toLocaleString() }} model groups visible</span>
+            <span
+              >{{ visibleGroups.length.toLocaleString() }} model groups
+              visible</span
+            >
           </div>
 
           <div v-if="visibleRows.length === 0" class="state-box">
@@ -408,26 +464,45 @@ function parseOptionalNumber(value: string): number | null {
             <span>Broaden the active filters.</span>
           </div>
 
-          <article v-for="group in visibleGroups" :key="group.model.name" class="model-card">
+          <article
+            v-for="group in visibleGroups"
+            :key="group.model.name"
+            class="model-card"
+          >
             <div class="model-heading">
               <div class="model-title-block">
-                <a class="model-title" :href="`${externalBaseUrl}${group.model.href}`" target="_blank" rel="noreferrer">
+                <a
+                  class="model-title"
+                  :href="`${externalBaseUrl}${group.model.href}`"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {{ group.model.name }}
                 </a>
                 <p>{{ group.model.summary }}</p>
               </div>
               <div class="model-stats">
-                <span>{{ group.model.pullCountLabel ?? 'Unknown' }} pulls</span>
-                <span>{{ group.model.tagCount ?? group.rows.length }} tags</span>
-                <span>{{ group.model.updatedLabel ?? 'Unknown update' }}</span>
+                <span>{{ group.model.pullCountLabel ?? "Unknown" }} pulls</span>
+                <span
+                  >{{ group.model.tagCount ?? group.rows.length }} tags</span
+                >
+                <span>{{ group.model.updatedLabel ?? "Unknown update" }}</span>
               </div>
             </div>
 
             <div class="model-chips">
-              <span v-for="capability in group.model.capabilities" :key="`${group.model.name}-${capability}`" class="capability-chip">
+              <span
+                v-for="capability in group.model.capabilities"
+                :key="`${group.model.name}-${capability}`"
+                class="capability-chip"
+              >
                 {{ capability }}
               </span>
-              <span v-for="parameterSize in group.model.parameterSizes" :key="`${group.model.name}-${parameterSize}`" class="parameter-chip">
+              <span
+                v-for="parameterSize in group.model.parameterSizes"
+                :key="`${group.model.name}-${parameterSize}`"
+                class="parameter-chip"
+              >
                 {{ parameterSize }}
               </span>
             </div>
@@ -444,15 +519,25 @@ function parseOptionalNumber(value: string): number | null {
               </div>
 
               <div v-for="row in group.rows" :key="row.name" class="tag-row">
-                <a class="tag-name" :href="`${externalBaseUrl}${row.href}`" target="_blank" rel="noreferrer">
+                <a
+                  class="tag-name"
+                  :href="`${externalBaseUrl}${row.href}`"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {{ row.name }}
                 </a>
                 <span>{{ formatBytes(row.sizeBytes) }}</span>
                 <span>{{ formatContext(row.contextTokens) }}</span>
                 <span>{{ formatParameterBillions(row.parameterB) }}</span>
-                <span>{{ row.inputTypes.join(', ') || 'Unknown' }}</span>
-                <span class="digest">{{ row.digest ?? 'Unknown' }}</span>
-                <button class="copy-button" type="button" :title="`Copy ollama pull ${row.name}`" @click="copyPullCommand(row.name)">
+                <span>{{ row.inputTypes.join(", ") || "Unknown" }}</span>
+                <span class="digest">{{ row.digest ?? "Unknown" }}</span>
+                <button
+                  class="copy-button"
+                  type="button"
+                  :title="`Copy ollama pull ${row.name}`"
+                  @click="copyPullCommand(row.name)"
+                >
                   <Check v-if="copiedCommand === row.name" :size="15" />
                   <Copy v-else :size="15" />
                 </button>
@@ -460,8 +545,20 @@ function parseOptionalNumber(value: string): number | null {
             </div>
           </article>
 
-          <button v-if="hasMoreRows" class="load-more" type="button" @click="visibleLimit += visibleIncrement">
-            Show {{ Math.min(visibleIncrement, visibleRows.length - displayedRows.length).toLocaleString() }} more tags
+          <button
+            v-if="hasMoreRows"
+            class="load-more"
+            type="button"
+            @click="visibleLimit += visibleIncrement"
+          >
+            Show
+            {{
+              Math.min(
+                visibleIncrement,
+                visibleRows.length - displayedRows.length,
+              ).toLocaleString()
+            }}
+            more tags
           </button>
         </template>
       </section>
@@ -975,7 +1072,10 @@ h2 {
   border-top: 1px solid var(--border);
   display: grid;
   gap: 10px;
-  grid-template-columns: minmax(220px, 2fr) minmax(72px, 0.7fr) minmax(78px, 0.7fr) minmax(74px, 0.7fr) minmax(90px, 0.8fr) minmax(112px, 0.9fr) 36px;
+  grid-template-columns: minmax(220px, 2fr) minmax(72px, 0.7fr) minmax(
+      78px,
+      0.7fr
+    ) minmax(74px, 0.7fr) minmax(90px, 0.8fr) minmax(112px, 0.9fr) 36px;
   min-height: 44px;
   padding: 7px 9px;
 }

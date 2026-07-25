@@ -1,11 +1,11 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Ollama Model Browser',
+      title: "Ollama Model Browser",
       meta: [
         {
-          name: 'description',
-          content: 'Browse and filter the live Ollama model catalogue.',
+          name: "description",
+          content: "Browse and filter the live Ollama model catalogue.",
         },
       ],
     },
@@ -23,7 +23,7 @@ export default defineNuxtConfig({
       sourcemap: false,
     },
     optimizeDeps: {
-      include: ['lucide-vue-next'],
+      include: ["lucide-vue-next"],
     },
   },
-})
+});

@@ -50,7 +50,7 @@ London, United Kingdom · syn@syn.as · +44 7432 104037 · they/them
 
 ## Summary
 
-Multiplatform infrastructure engineer with more than twenty years across DevOps, SRE, and systems administration, specialising in Kubernetes and Linux/*BSD environments and equally comfortable in Windows. Extensive production experience with Google Cloud Platform and Amazon Web Services, more recently joined by the Cloudflare developer platform (Workers, D1). Strong Kubernetes administration and troubleshooting background, including initial buildouts and value-adds such as the Linkerd service mesh and Prometheus monitoring.
+Multiplatform infrastructure engineer with more than twenty years across DevOps, SRE, and systems administration, specialising in Kubernetes and Linux/\*BSD environments and equally comfortable in Windows. Extensive production experience with Google Cloud Platform and Amazon Web Services, more recently joined by the Cloudflare developer platform (Workers, D1). Strong Kubernetes administration and troubleshooting background, including initial buildouts and value-adds such as the Linkerd service mesh and Prometheus monitoring.
 
 A great believer in automation over repetitive busywork — freeing engineering time for harder problems and minimising the scope for human error — with current tooling centred on infrastructure-as-code (Terraform, Pulumi), GitOps, and OpenTelemetry-based observability.
 
@@ -71,7 +71,7 @@ Programs in Go, Python, Ruby, JavaScript/TypeScript, and shell (a Fish enthusias
 - **Containers & orchestration:** Kubernetes, Docker, containers, Linkerd service mesh
 - **Automation & IaC:** Terraform, Pulumi, GitOps, infrastructure-as-code, CI/CD, serverless
 - **Observability:** Prometheus, OpenTelemetry, monitoring, logging standardisation, incident management
-- **Operating systems:** Linux (Red Hat/CentOS, Ubuntu), FreeBSD/*BSD, Windows/Windows Server, macOS, AIX (historical)
+- **Operating systems:** Linux (Red Hat/CentOS, Ubuntu), FreeBSD/\*BSD, Windows/Windows Server, macOS, AIX (historical)
 - **Languages:** Go, Python, Ruby, JavaScript, TypeScript, shell (bash, fish), Rust; intermediate Java
 - **Networking:** Cisco IOS, Vyatta, MikroTik, Ubiquiti, Juniper, SD-WAN, VoIP, load balancing (HAProxy, Nginx, Apache)
 - **Data & storage:** PostgreSQL, MySQL, Redis, database administration, SAN/NAS (3PAR, EMC)

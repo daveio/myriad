@@ -338,9 +338,9 @@ FROM ruby:3.2-slim AS build
 # Install Node (for JS build) and yarn if not already present
 
 RUN apt-get update -qq && apt-get install -y curl && \
- curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
- apt-get install -y nodejs && \
- npm install -g yarn
+curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
+apt-get install -y nodejs && \
+npm install -g yarn
 
 WORKDIR /app
 

@@ -1,36 +1,36 @@
-import js from '@eslint/js'
-import pluginVue from 'eslint-plugin-vue'
-import globals from 'globals'
-import tseslint from 'typescript-eslint'
-import vueParser from 'vue-eslint-parser'
+import js from "@eslint/js";
+import pluginVue from "eslint-plugin-vue";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import vueParser from "vue-eslint-parser";
 
 export default [
   {
     ignores: [
-      '.nuxt/**',
-      '.output/**',
-      '.serena/**',
-      'coverage/**',
-      'dist/**',
-      'node_modules/**',
+      ".nuxt/**",
+      ".output/**",
+      ".serena/**",
+      "coverage/**",
+      "dist/**",
+      "node_modules/**",
     ],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
-  ...pluginVue.configs['flat/recommended'],
+  ...pluginVue.configs["flat/recommended"],
   {
-    files: ['**/*.vue'],
+    files: ["**/*.vue"],
     languageOptions: {
       parser: vueParser,
       parserOptions: {
-        extraFileExtensions: ['.vue'],
+        extraFileExtensions: [".vue"],
         parser: tseslint.parser,
-        sourceType: 'module',
+        sourceType: "module",
       },
     },
   },
   {
-    files: ['**/*.{js,mjs,ts,vue}'],
+    files: ["**/*.{js,mjs,ts,vue}"],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -38,10 +38,10 @@ export default [
       },
     },
     rules: {
-      'no-undef': 'off',
-      'vue/max-attributes-per-line': 'off',
-      'vue/multi-word-component-names': 'off',
-      'vue/singleline-html-element-content-newline': 'off',
+      "no-undef": "off",
+      "vue/max-attributes-per-line": "off",
+      "vue/multi-word-component-names": "off",
+      "vue/singleline-html-element-content-newline": "off",
     },
   },
-]
+];
