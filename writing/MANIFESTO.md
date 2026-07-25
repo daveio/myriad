@@ -19,7 +19,7 @@ Every consultancy you've ever worked for exists to do one thing: widen the gap b
 
 1. **Accountable to workers, not shareholders.** There are no shareholders to appease. The people who do the work make the decisions, with radical transparency about how and why.
 
-2. **When we win, everyone wins.** Profits are shared among all of us — weighted by seniority, because we're radical, not naive — but reaching *everyone*, down to the newest and least glamorous role. When the company does better, so does every single person in it.
+2. **When we win, everyone wins.** Profits are shared among all of us — weighted by seniority, because we're radical, not naive — but reaching _everyone_, down to the newest and least glamorous role. When the company does better, so does every single person in it.
 
 3. **A floor below which nobody falls.** A dependable base salary you can plan a life around, plus a minimum floor beneath which no role pays. When the floor rises, it rises for everyone stood on it — and workers help decide when.
 
@@ -29,7 +29,7 @@ Every consultancy you've ever worked for exists to do one thing: widen the gap b
 
 6. **Engineered for brains that don't run corporate firmware.** We staff every job with more people than strictly necessary, because redundancy isn't waste — ask any SRE. When someone's brain checks out for a day (and someone's will; that's the whole point), the work doesn't collapse and neither do they. n+1, but for humans.
 
-7. **Remote-first, permanently.** No office, no commute, and an allowance to build a workspace that actually works for you. Meet-ups once or twice a year, genuinely optional — where "optional" means *optional*, not "career-limiting to skip".
+7. **Remote-first, permanently.** No office, no commute, and an allowance to build a workspace that actually works for you. Meet-ups once or twice a year, genuinely optional — where "optional" means _optional_, not "career-limiting to skip".
 
 8. **Nobody faces a hostile client alone.** Client-facing work is an opt-in rota, never an obligation. And if a customer treats our people badly, we can vote to fire the customer. We will turn down money before we spend our people on it.
 
@@ -42,7 +42,7 @@ Every consultancy you've ever worked for exists to do one thing: widen the gap b
 - **Not a charity.** We charge properly, deliver properly, and are extremely good at what we do. Treating workers well isn't a discount — it's why the work is better.
 - **Not a startup chasing an exit.** There is no exit. The company is the point.
 - **Not a family.** Families don't pay you. We're colleagues who have your back, which is considerably more useful.
-- **Not a culture fit.** We *are* the misfits. Fit accordingly.
+- **Not a culture fit.** We _are_ the misfits. Fit accordingly.
 
 ## What we do
 

@@ -178,7 +178,7 @@ Programs in Go, Python, Ruby, JavaScript/TypeScript, and shell (a Fish enthusias
 
 ## Projects
 
-Independent work from 2023 onwards, included as primary evidence of current, hands-on engineering across the employment gap. Sourced from [syn.horse/projects](https://syn.horse/projects) and [github.com/synmux](https://github.com/synmux); descriptions marked *site voice* are quoted verbatim from syn.horse.
+Independent work from 2023 onwards, included as primary evidence of current, hands-on engineering across the employment gap. Sourced from [syn.horse/projects](https://syn.horse/projects) and [github.com/synmux](https://github.com/synmux); descriptions marked _site voice_ are quoted verbatim from syn.horse.
 
 ### syn.horse
 
@@ -186,7 +186,7 @@ Independent work from 2023 onwards, included as primary evidence of current, han
 - **Stack:** Nuxt 4, Cloudflare Workers, Wrangler, Markdown content · open source
 - **Links:** <https://syn.horse>
 - Personal site and platform, run as a production service: Nuxt 4 on Cloudflare Workers with markdown-based content and Wrangler deployments. Third full rewrite of the site.
-- *Site voice:* "this site. nuxt 4 on cloudflare workers. the third rewrite. the last one. probably."
+- _Site voice:_ "this site. nuxt 4 on cloudflare workers. the third rewrite. the last one. probably."
 
 ### genderbase
 
@@ -194,7 +194,7 @@ Independent work from 2023 onwards, included as primary evidence of current, han
 - **Stack:** Nuxt, wiki-style content · live
 - **Links:** <https://genderbase.com>
 - A structured directory of gender-affirming resources, maintained on a quarterly review cycle to prune dead links and add new material.
-- *Site voice:* "a directory of gender-affirming resources. low ui, high index."
+- _Site voice:_ "a directory of gender-affirming resources. low ui, high index."
 
 ### Project Ambio
 
@@ -216,7 +216,7 @@ Independent work from 2023 onwards, included as primary evidence of current, han
 - **Stack:** CLI · open source
 - **Links:** <https://github.com/synmux/rhymepass>
 - Command-line generator for rhyming — yet still secure — passwords.
-- *Site voice:* "generates rhyming passwords. yes, really. yes, secure."
+- _Site voice:_ "generates rhyming passwords. yes, really. yes, secure."
 
 ### recon
 
@@ -224,7 +224,7 @@ Independent work from 2023 onwards, included as primary evidence of current, han
 - **Stack:** iOS · independent App Store release
 - **Links:** <https://syn.horse/projects> (App Store listing linked from there)
 - iOS utility to resize and convert images, shipped end-to-end as an independent release.
-- *Site voice:* "resize and convert images on iOS. a small, opinionated, genuinely fast tool."
+- _Site voice:_ "resize and convert images on iOS. a small, opinionated, genuinely fast tool."
 
 ### lics
 
@@ -239,7 +239,7 @@ Independent work from 2023 onwards, included as primary evidence of current, han
 - **Stack:** static site, Cloudflare
 - **Links:** <https://dcw.soy>
 - Single-purpose static site; a joke shipped properly, with TLS.
-- *Site voice:* "a duck or a soy? a static site that asks the only question that matters."
+- _Site voice:_ "a duck or a soy? a static site that asks the only question that matters."
 
 ### Meshtastic node
 
@@ -261,4 +261,4 @@ Independent work from 2023 onwards, included as primary evidence of current, han
 - **Stack:** Go, web · open source
 - **Links:** <https://github.com/synmux/tabby>
 - Personal new-tab dashboard: todos, weather, RSS feeds, and more in one page.
-- *Site voice:* "a personal new tab dashboard. todos, weather, RSS, the lot."
+- _Site voice:_ "a personal new tab dashboard. todos, weather, RSS, the lot."

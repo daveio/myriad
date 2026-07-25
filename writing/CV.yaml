@@ -116,29 +116,100 @@ key_achievements:
 
 skills:
   - group: "Cloud platforms"
-    items: ["Google Cloud Platform", "Amazon Web Services", "Azure", "Cloudflare (Workers, D1)"]
+    items:
+      [
+        "Google Cloud Platform",
+        "Amazon Web Services",
+        "Azure",
+        "Cloudflare (Workers, D1)",
+      ]
   - group: "Containers & orchestration"
     items: ["Kubernetes", "Docker", "containers", "Linkerd service mesh"]
   - group: "Automation & IaC"
-    items: ["Terraform", "Pulumi", "GitOps", "infrastructure-as-code", "CI/CD", "serverless"]
+    items:
+      [
+        "Terraform",
+        "Pulumi",
+        "GitOps",
+        "infrastructure-as-code",
+        "CI/CD",
+        "serverless",
+      ]
   - group: "Observability"
-    items: ["Prometheus", "OpenTelemetry", "monitoring", "logging standardisation", "incident management"]
+    items:
+      [
+        "Prometheus",
+        "OpenTelemetry",
+        "monitoring",
+        "logging standardisation",
+        "incident management",
+      ]
   - group: "Operating systems"
-    items: ["Linux (Red Hat/CentOS, Ubuntu)", "FreeBSD/*BSD", "Windows/Windows Server", "macOS", "AIX (historical)"]
+    items:
+      [
+        "Linux (Red Hat/CentOS, Ubuntu)",
+        "FreeBSD/*BSD",
+        "Windows/Windows Server",
+        "macOS",
+        "AIX (historical)",
+      ]
   - group: "Languages"
-    items: ["Go", "Python", "Ruby", "JavaScript", "TypeScript", "shell (bash, fish)", "Rust", "Java (intermediate)"]
+    items:
+      [
+        "Go",
+        "Python",
+        "Ruby",
+        "JavaScript",
+        "TypeScript",
+        "shell (bash, fish)",
+        "Rust",
+        "Java (intermediate)",
+      ]
   - group: "Networking"
-    items: ["Cisco IOS", "Vyatta", "MikroTik", "Ubiquiti", "Juniper", "SD-WAN", "VoIP", "load balancing (HAProxy, Nginx, Apache)"]
+    items:
+      [
+        "Cisco IOS",
+        "Vyatta",
+        "MikroTik",
+        "Ubiquiti",
+        "Juniper",
+        "SD-WAN",
+        "VoIP",
+        "load balancing (HAProxy, Nginx, Apache)",
+      ]
   - group: "Data & storage"
-    items: ["PostgreSQL", "MySQL", "Redis", "database administration", "SAN/NAS (3PAR, EMC)"]
+    items:
+      [
+        "PostgreSQL",
+        "MySQL",
+        "Redis",
+        "database administration",
+        "SAN/NAS (3PAR, EMC)",
+      ]
   - group: "Virtualisation"
     items: ["VMware"]
   - group: "Security"
-    items: ["platform hardening", "penetration testing", "DFIR", "IoT security", "threat management", "attack-surface reduction"]
+    items:
+      [
+        "platform hardening",
+        "penetration testing",
+        "DFIR",
+        "IoT security",
+        "threat management",
+        "attack-surface reduction",
+      ]
   - group: "Web frameworks (project work)"
     items: ["Nuxt", "Vue", "Tailwind CSS", "Ruby on Rails (historical)"]
   - group: "Leadership & practice"
-    items: ["team building and management", "upskilling", "sprint-based prioritisation", "project and budget management", "on-call rota design", "runbooks"]
+    items:
+      [
+        "team building and management",
+        "upskilling",
+        "sprint-based prioritisation",
+        "project and budget management",
+        "on-call rota design",
+        "runbooks",
+      ]
 
 experience:
   - id: "independent"
@@ -320,7 +391,96 @@ community_interests:
   - "Mesh and community networking (Meshtastic, LoRa)."
   - "Lifelong special interest in information security."
 
-keywords: ["3PAR", "AIX", "Amazon Web Services", "Apache", "Asigra", "Automation", "AWS", "Azure", "Bun", "CentOS", "CI/CD", "Cisco IOS", "Cloud Computing", "Cloudflare D1", "Cloudflare Workers", "Containers", "cPanel", "Database Administration", "DFIR", "Docker", "Drizzle ORM", "EMC", "Fish shell", "FreeBSD", "GCP", "GitOps", "Go", "Google Cloud Platform", "HAProxy", "High Availability", "Incident Management", "Infrastructure as Code", "IoT Security", "IT Security", "ITIL", "Java", "JavaScript", "Juniper", "Kubernetes", "Linkerd", "Linux", "Load Balancing", "LoRa", "macOS", "Meshtastic", "MikroTik", "MySQL", "NAS", "Network Administration", "Network Security", "Nginx", "Nuxt", "Observability", "On-call", "OpenTelemetry", "Passenger", "Penetration Testing", "Platform Hardening", "PostgreSQL", "Prometheus", "Pulumi", "Python", "Red Hat Linux", "Redis", "Ruby", "Ruby on Rails", "Rust", "SAN", "SD-WAN", "Serverless", "Service Mesh", "Shell Scripting", "Systems Administration", "Tailwind CSS", "Terraform", "TypeScript", "Ubiquiti", "Ubuntu", "Vignette", "Virtualisation", "VMware", "VoIP", "Vue", "Vyatta", "Windows", "Windows Server", "Wrangler"]
+keywords:
+  [
+    "3PAR",
+    "AIX",
+    "Amazon Web Services",
+    "Apache",
+    "Asigra",
+    "Automation",
+    "AWS",
+    "Azure",
+    "Bun",
+    "CentOS",
+    "CI/CD",
+    "Cisco IOS",
+    "Cloud Computing",
+    "Cloudflare D1",
+    "Cloudflare Workers",
+    "Containers",
+    "cPanel",
+    "Database Administration",
+    "DFIR",
+    "Docker",
+    "Drizzle ORM",
+    "EMC",
+    "Fish shell",
+    "FreeBSD",
+    "GCP",
+    "GitOps",
+    "Go",
+    "Google Cloud Platform",
+    "HAProxy",
+    "High Availability",
+    "Incident Management",
+    "Infrastructure as Code",
+    "IoT Security",
+    "IT Security",
+    "ITIL",
+    "Java",
+    "JavaScript",
+    "Juniper",
+    "Kubernetes",
+    "Linkerd",
+    "Linux",
+    "Load Balancing",
+    "LoRa",
+    "macOS",
+    "Meshtastic",
+    "MikroTik",
+    "MySQL",
+    "NAS",
+    "Network Administration",
+    "Network Security",
+    "Nginx",
+    "Nuxt",
+    "Observability",
+    "On-call",
+    "OpenTelemetry",
+    "Passenger",
+    "Penetration Testing",
+    "Platform Hardening",
+    "PostgreSQL",
+    "Prometheus",
+    "Pulumi",
+    "Python",
+    "Red Hat Linux",
+    "Redis",
+    "Ruby",
+    "Ruby on Rails",
+    "Rust",
+    "SAN",
+    "SD-WAN",
+    "Serverless",
+    "Service Mesh",
+    "Shell Scripting",
+    "Systems Administration",
+    "Tailwind CSS",
+    "Terraform",
+    "TypeScript",
+    "Ubiquiti",
+    "Ubuntu",
+    "Vignette",
+    "Virtualisation",
+    "VMware",
+    "VoIP",
+    "Vue",
+    "Vyatta",
+    "Windows",
+    "Windows Server",
+    "Wrangler",
+  ]
 
 projects:
   note: >-
@@ -361,7 +521,18 @@ projects:
       start: "2025"
       end: null
       status: "in development"
-      stack: ["C++ (firmware)", "Nuxt 4", "Vue 3", "Three.js", "Tailwind CSS", "DaisyUI", "Cloudflare D1", "Drizzle ORM", "Bun"]
+      stack:
+        [
+          "C++ (firmware)",
+          "Nuxt 4",
+          "Vue 3",
+          "Three.js",
+          "Tailwind CSS",
+          "DaisyUI",
+          "Cloudflare D1",
+          "Drizzle ORM",
+          "Bun",
+        ]
       open_source: false
       links: ["https://github.com/synmux/ambio-systems"]
       summary: >-
